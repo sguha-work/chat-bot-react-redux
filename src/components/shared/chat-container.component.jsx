@@ -1,6 +1,7 @@
 import ChatInputContainerComponent from "./chat-input-container.component"
 import ChatMessageReceiverComponent from "./chat-message-receiver.component"
 import ChatMessageSenderComponent from "./chat-message-sender.component"
+import LinkContainerComponent from "./link-container.component";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 function ChatContainerComponent() {
@@ -18,6 +19,7 @@ function ChatContainerComponent() {
               <>
                 {message.type == 'sender' && (<ChatMessageSenderComponent message={message}></ChatMessageSenderComponent>)}
                 {message.type == 'receiver' && (<ChatMessageReceiverComponent message={message}></ChatMessageReceiverComponent>)}
+                {message.type =='sender' && message.message=='link' && (<LinkContainerComponent></LinkContainerComponent>)}
               </>
             )
           })

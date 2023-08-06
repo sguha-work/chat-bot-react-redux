@@ -1,10 +1,10 @@
 import './App.css';
-import ChatPageComponent from './components/pages/chat.page.component'
-
+import routes from './routes/routes';
+import { RouterProvider } from 'react-router-dom';
 function App() {
   return (
     <>
-      <ChatPageComponent></ChatPageComponent>
+     <RouterProvider router={routes} />
 
     </>
   )

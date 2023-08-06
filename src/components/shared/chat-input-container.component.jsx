@@ -6,7 +6,6 @@ function ChatInputContainerComponent() {
     const inputElement = useRef();
     const dispatch = useDispatch();
     const receiveReply = () => {
-        console.log('hiiiii',counter.current)
         switch(counter.current) {
             case 0:
                 dispatch(receiveBotReply({
@@ -24,7 +23,7 @@ function ChatInputContainerComponent() {
                 break;
             case 2:
                 dispatch(receiveBotReply({
-                    message: "Service, career, contact",
+                    message: "link",
                     type: "sender",
                     time: Date.now()
                 }));
